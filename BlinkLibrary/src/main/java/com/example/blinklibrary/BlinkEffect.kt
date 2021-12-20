@@ -2,9 +2,11 @@ package com.example.blinklibrary
 
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
+import android.content.Context
 import android.graphics.Color
 import android.view.View
 import android.view.animation.Animation
+import android.widget.Toast
 
 object BlinkEffect {
 
@@ -23,5 +25,9 @@ object BlinkEffect {
         // Repeat up to infinite time
         animator.repeatCount = Animation.INFINITE
         animator.start()
+    }
+
+    fun showToastMessage(context:Context,message:String){
+        Toast.makeText(context,""+message,Toast.LENGTH_SHORT).show()
     }
 }
